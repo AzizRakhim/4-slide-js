@@ -69,18 +69,20 @@ let elNext = document.querySelector(".next-btn");
 
 idx = 0;
 elNext.addEventListener("click", () => {
-  let c = elArr[idx];
-  elArr[idx] = elArr[idx + 1];
-  elArr[elArr.length] = c;
+  elArr[elArr.length] = elArr[idx];
   idx++;
   showIt();
 });
 
-idxTwo = 0;
+
 elPrev.addEventListener("click", () => {
-  let z = elArr[idxTwo];
-  elArr[idxTwo + 1] = z;
-  elArr[0] = elArr.pop();
-  idxTwo++;
+  let elCorrect = [];
+  elCorrect.push(elArr[elArr.length - 1]);
+
+  for(let i = 0; i < elArr.length - 1; i++){
+    elCorrect.push(elArr[i]);
+  }
+  elArr = elCorrect;
+
   showIt();
 });

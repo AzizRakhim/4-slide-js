@@ -571,4 +571,8 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+
+.carousel-holder {
+  overflow: hidden;
+}
 /*# sourceMappingURL=main.css.map */
